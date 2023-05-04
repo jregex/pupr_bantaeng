@@ -1,11 +1,7 @@
-// import { useAuth } from '@/hooks/auth'
 import AppLayout from '@/components/Layouts/AppLayout'
-import axios from 'axios'
+// import axios from 'axios'
 
-export default function Home(props) {
-    // const { user } = useAuth({ middleware: 'guest' })
-    // const user = props.users
-    // console.log(user)
+export default function Home() {
     return <AppLayout>{/*  */}</AppLayout>
 }
 

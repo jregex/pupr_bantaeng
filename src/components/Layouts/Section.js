@@ -5,7 +5,7 @@ import Image from 'next/image'
 function Navbar() {
     return (
         <>
-            <section id="home" className="pt-36">
+            <section id="home" className="pt-36 pb-4">
                 <div className="container">
                     <div className="flex flex-wrap">
                         <div className="w-full self-center px-4 lg:w-1/2">
@@ -28,11 +28,13 @@ function Navbar() {
                                     height={400}
                                     src={require('assets/img/kepala-dinas.png')}
                                     className="max-w-full mx-auto bg-none lg:max-w-1/2 rounded-full"
+                                    alt="kepala dinas"
+                                    blurDataURL="https://dummyimage.com/640x360/fff/aaa"
+                                    priority
                                 />
                                 <span className="absolute -z-10 bottom-0 left-1/2 -translate-x-1/2 md:scale-120">
                                     <svg
-                                        width={400}
-                                        height={400}
+                                        className="max-w-[350px] h-[300px] lg:max-w-[400px] lg:h-[400px]"
                                         viewBox="0 0 200 200"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -55,7 +57,10 @@ function Navbar() {
                                 width={400}
                                 height={400}
                                 src={require('assets/img/bupatibt.png')}
-                                className="max-w-full mx-auto bg-none lg:max-w-1/2 shadow-lg"
+                                className="max-w-full mx-auto bg-none lg:max-w-1/2 lg:max-h-auto"
+                                alt="Bupati"
+                                blurDataURL="https://dummyimage.com/640x360/fff/aaa"
+                                priority
                             />
                         </div>
                         <div className="w-full px-4 lg:w-1/2">
