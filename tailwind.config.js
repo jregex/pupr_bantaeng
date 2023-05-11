@@ -19,6 +19,27 @@ module.exports = {
             screens: {
                 '2xl': '1280px',
             },
+            keyframes: {
+                coba: {
+                    '75%, 100%': {
+                        transform: 'scale(1.4)',
+                        opacity: '0.6',
+                    },
+                },
+                pantul: {
+                    '0%, 100% ': {
+                        transform: 'translateY(-10%)',
+                        timing: 'linear',
+                    },
+                    '50%': {
+                        transform: 'translateY(0)',
+                    },
+                },
+            },
+            animation: {
+                'ping-slow': 'coba 1s cubic-bezier(0, 0, 0.3, 1)',
+                'pantul-slow': 'pantul 5s infinite',
+            },
         },
     },
     variants: {
@@ -26,5 +47,11 @@ module.exports = {
             opacity: ['disabled'],
         },
     },
-    plugins: [require('@tailwindcss/forms')],
+    purge: {
+        enable: true,
+    },
+    plugins: [require('@tailwindcss/forms'), require('daisyui')],
+    daisyui: {
+        themes: false,
+    },
 }

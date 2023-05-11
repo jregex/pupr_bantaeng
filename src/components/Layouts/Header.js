@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import NavMobile from '../NavMobile'
+import ApplicationLogo from '../ApplicationLogo'
+import { motion } from 'framer-motion'
 
 function Header() {
     const [isi, setIsi] = useState('')
@@ -22,16 +24,20 @@ function Header() {
         <header className={`${isi} top-0 left-0 w-full flex items-center z-10`}>
             <div className="container">
                 <div className="flex items-center justify-between relative">
-                    <div className="px-4">
-                        <a
-                            href="#home"
-                            className="font-bold text-xl text-primary block py-6 lg:text-xl">
-                            DPUPR Bantaeng
-                        </a>
-                    </div>
-                    <div className="px-4 flex items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -500, y: 0 }}
+                        animate={{ opacity: 1, x: 0, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="px-4">
+                        <ApplicationLogo />
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 500, y: 0 }}
+                        animate={{ opacity: 1, x: 0, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="px-4 flex items-center">
                         <NavMobile active={active} showMenu={showMenu} />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </header>

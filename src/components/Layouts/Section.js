@@ -1,14 +1,25 @@
 import React from 'react'
 import Button from '../Button'
 import Image from 'next/image'
+import NewsCard from '../NewsCard'
+import GalleryModal from '../GalleryModal'
+import { motion } from 'framer-motion'
 
-function Navbar() {
+export default function Section() {
+    // const [modal, setModal] = useState(false)
+    // function handleChange() {
+    //     setModal(!modal)
+    // }
     return (
         <>
             <section id="home" className="pt-36 pb-4">
                 <div className="container">
                     <div className="flex flex-wrap">
-                        <div className="w-full self-center px-4 lg:w-1/2">
+                        <motion.div
+                            initial={{ opacity: 0, y: 500 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.5 }}
+                            className="w-full self-center px-4 lg:w-1/2">
                             <h1 className="text-lg font-semibold text-primary md:text-xl">
                                 Welcome to{' '}
                                 <span className="block font-bold text-dark text-4xl mt-1 lg:text-5xl">
@@ -20,9 +31,13 @@ function Navbar() {
                             </h2>
 
                             <Button type="button">Hubungi saya</Button>
-                        </div>
-                        <div className="w-full self-end px-4 lg:w-1/2">
-                            <div className="mt-10 relative lg:mt-9 lg:right-0">
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: -500 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 2 }}
+                            className="w-full self-end px-4 lg:w-1/2">
+                            <div className="mt-10 relative lg:mt-9 lg:right-0 animate-pantul-slow">
                                 <Image
                                     width={400}
                                     height={400}
@@ -32,7 +47,7 @@ function Navbar() {
                                     blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                     priority
                                 />
-                                <span className="absolute -z-10 bottom-0 left-1/2 -translate-x-1/2 md:scale-120">
+                                <span className="absolute -z-10 bottom-0 left-1/2 -translate-x-1/2 md:scale-120 mix-blend-lighten">
                                     <svg
                                         className="max-w-[350px] h-[300px] lg:max-w-[400px] lg:h-[400px]"
                                         viewBox="0 0 200 200"
@@ -45,11 +60,125 @@ function Navbar() {
                                     </svg>
                                 </span>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
-            <section id="about" className="pt-36 pb-35">
+            <section className="pt-32 pb-16 bg-slate-100" id="portofolio">
+                <div className="container">
+                    <div className="w-full flex flex-wrap items-center justify-center">
+                        <motion.a
+                            initial={{ opacity: 0, y: 500 }}
+                            animate={{ opacity: 1, x: 0, y: 0 }}
+                            transition={{ duration: 3.2 }}
+                            href="#"
+                            target="_blank"
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center">
+                            <Image
+                                width={400}
+                                src={require('assets/img/icons/sianata2.svg')}
+                                alt="Sianata"
+                                blurDataURL="https://dummyimage.com/640x360/fff/aaa"
+                                priority
+                            />
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                                New Sianata
+                            </h3>
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0, y: 500 }}
+                            animate={{ opacity: 1, x: 0, y: 0 }}
+                            transition={{ duration: 3 }}
+                            href="#"
+                            target="_blank"
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            <Image
+                                width={400}
+                                src={require('assets/img/icons/geolocation2.svg')}
+                                alt="Geoportal"
+                                blurDataURL="https://dummyimage.com/640x360/fff/aaa"
+                                priority
+                            />
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                                Geoportal
+                            </h3>
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0, y: 500 }}
+                            animate={{ opacity: 1, x: 0, y: 0 }}
+                            transition={{ duration: 2.8 }}
+                            href="#"
+                            target="_blank"
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            <Image
+                                width={400}
+                                src={require('assets/img/icons/building.svg')}
+                                alt="Infrastructure"
+                                blurDataURL="https://dummyimage.com/640x360/fff/aaa"
+                                priority
+                            />
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                                Infrastructure
+                            </h3>
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0, y: 500 }}
+                            animate={{ opacity: 1, x: 0, y: 0 }}
+                            transition={{ duration: 2.6 }}
+                            href="#"
+                            target="_blank"
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            <Image
+                                width={400}
+                                src={require('assets/img/icons/archive2.svg')}
+                                alt="Archive"
+                                blurDataURL="https://dummyimage.com/640x360/fff/aaa"
+                                priority
+                            />
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                                Archive
+                            </h3>
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0, y: 500 }}
+                            animate={{ opacity: 1, x: 0, y: 0 }}
+                            transition={{ duration: 2.4 }}
+                            href="#"
+                            target="_blank"
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            <Image
+                                width={400}
+                                src={require('assets/img/icons/lpse2.svg')}
+                                alt="LPSE"
+                                blurDataURL="https://dummyimage.com/640x360/fff/aaa"
+                                priority
+                            />
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                                LPSE
+                            </h3>
+                        </motion.a>
+                        <motion.a
+                            initial={{ opacity: 0, y: 500 }}
+                            animate={{ opacity: 1, x: 0, y: 0 }}
+                            transition={{ duration: 2.2 }}
+                            href="#"
+                            target="_blank"
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            <Image
+                                width={400}
+                                src={require('assets/img/icons/sianata.svg')}
+                                alt="Sianata"
+                                blurDataURL="https://dummyimage.com/640x360/fff/aaa"
+                                priority
+                            />
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                                Sianata
+                            </h3>
+                        </motion.a>
+                    </div>
+                </div>
+            </section>
+            <section id="about" className="pt-36 pb-30">
                 <div className="container">
                     <div className="flex flex-wrap">
                         <div className="w-full px-4 mb-10 lg:w-1/2">
@@ -129,8 +258,110 @@ function Navbar() {
                     </div>
                 </div>
             </section>
+
+            <section id="article" className="pt-36 pb-32 bg-slate-100">
+                <div className="container">
+                    <div className="w-full px-4">
+                        <div className="max-w-xl mx-auto text-center mb-10">
+                            <h4 className="font-bold text-3xl text-primary mb-2">
+                                Artikel
+                            </h4>
+                            <h2 className="font-semibold text-dark text-lg mb-2 sm:text-2xl lg:text-xl">
+                                Artikel Terbaru
+                            </h2>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap">
+                        <div className="px-4 grid grid-cols-1 lg:grid-cols-4 gap-x-4">
+                            <NewsCard
+                                gambar={require('assets/img/contoh.png')}
+                                judul="Belajar Programming"
+                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
+                                alamat="#"
+                                alt="Article1"
+                            />
+                            <NewsCard
+                                gambar={require('assets/img/contoh.png')}
+                                judul="Belajar Ngoding"
+                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
+                                alamat="#"
+                                alt="article 2"
+                            />
+                            <NewsCard
+                                gambar={require('assets/img/contoh.png')}
+                                judul="Belajar Next js"
+                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
+                                alamat="#"
+                                alt="article 3"
+                            />
+                            <NewsCard
+                                gambar={require('assets/img/contoh.png')}
+                                judul="Belajar Next js"
+                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
+                                alamat="#"
+                                alt="article 4"
+                            />
+                            <NewsCard
+                                gambar={require('assets/img/contoh.png')}
+                                judul="Belajar Next js"
+                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
+                                alamat="#"
+                                alt="article 4"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* <section id="iframe" className="pt-36 pb-16 bg-slate-800">
+                <div className="container">
+                    <div className="flex flex-wrap">
+                        <div className="w-full lg:w-1/2">
+                            <iframe
+                                className="w-full h-64"
+                                src="https://www.youtube.com/embed/8Ea4oq8qFtM"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            />
+                        </div>
+                        <div className="w-full lg:w-1/2 px-10">
+                            <h3 className="font-bold text-2xl text-primary">
+                                Video
+                            </h3>
+                            <h4 className="text-lg font-semibold text-gray-100">
+                                sh kjhsdkj hsdf hsdjkh skjdhk lah lajh
+                                dlfjhasjdhfa sjhdf ajshf asjdhkf
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </section> */}
+            <section className="pt-36 pb-32 bg-dark" id="gallery">
+                <div className="container">
+                    <div className="w-full px-4">
+                        <div className="max-w-xl mx-auto text-center mb-10">
+                            <h4 className="font-bold text-3xl text-primary mb-2">
+                                Gallery
+                            </h4>
+                            <h2 className="font-semibold text-slate-200 text-lg mb-2 sm:text-2xl lg:text-xl">
+                                Foto Terbaru
+                            </h2>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap">
+                        <div className="px-4 grid grid-cols-1 lg:grid-cols-4 gap-x-4">
+                            <GalleryModal />
+                            <GalleryModal />
+                            <GalleryModal />
+                            <GalleryModal />
+                            <GalleryModal />
+                            <GalleryModal />
+                            <GalleryModal />
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
-
-export default Navbar

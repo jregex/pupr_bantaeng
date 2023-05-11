@@ -24,6 +24,7 @@ module.exports = {
     },
     plugins: ['react', '@next/eslint-plugin-next', 'prettier'],
     rules: {
+        'prefer-const': 'error',
         'import/prefer-default-export': 0,
         'no-console': 'warn',
         'no-nested-ternary': 0,
