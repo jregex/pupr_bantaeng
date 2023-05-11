@@ -1,16 +1,16 @@
 import React from 'react'
 
 function User() {
-  return (
-    <div>
-        <h1>Selamat Datang</h1>
-        {/* {users.map((item,index)=>{
+    return (
+        <div>
+            <h1>Selamat Datang</h1>
+            {/* {users.map((item,index)=>{
            return (
             <p className='text-lg text-amber-900' key={item.id}>{item.name}</p>
            )
         })} */}
-    </div>
-  )
+        </div>
+    )
 }
 
 // export async function getServerSideProps() {
