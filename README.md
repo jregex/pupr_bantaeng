@@ -8,7 +8,7 @@ This repository is an implementation of the [Laravel Breeze](https://laravel.com
 
 ### Installation
 
-First, create a Next.js compatible Laravel backend by installing Laravel Breeze into a [fresh Laravel application](https://laravel.com/docs/installation) and installing Breeze's API scaffolding:
+Cara menginstall Laravel Breeze:
 
 ```bash
 # Create the Laravel application...
@@ -86,4 +86,5 @@ Please review [our security policy](https://github.com/laravel/breeze-next/secur
 ## License
 
 Laravel Breeze Next is open-sourced software licensed under the [MIT license](LICENSE.md).
+
 # pupr_bantaeng
