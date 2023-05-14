@@ -3,9 +3,9 @@ import Header from './Header'
 
 const AppLayout = ({ children }) => {
     return (
-        <div className="max-h-screen">
+        <div className="max-h-screen w-screen">
             <Header />
-            <main>{children}</main>
+            <main className="w-screen">{children}</main>
             <Footer />
         </div>
     )

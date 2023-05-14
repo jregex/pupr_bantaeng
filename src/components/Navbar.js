@@ -30,18 +30,16 @@ function Navbar({ showMenu, active }) {
                 onClick={showMenu}
                 id="humberger"
                 name="hamburger"
-                className="absolute right-4 cursor-pointer lg:hidden text-slate-400 hover:text-primary flex items-center justify-center transition duration-200 ease-in-out">
+                className="absolute right-2 cursor-pointer lg:hidden text-3xl text-slate-400 hover:text-primary flex items-center justify-center transition duration-200 ease-in-out">
                 {active ? (
                     <FontAwesomeIcon
                         icon={faBars}
-                        style={{ fontSize: 36 }}
-                        className="text-primay"
+                        className="text-slate-400 hover:text-primary"
                     />
                 ) : (
                     <FontAwesomeIcon
                         icon={faTimes}
-                        style={{ fontSize: 36 }}
-                        className="text-primay"
+                        className="text-slate-400 hover:text-primary"
                     />
                 )}
             </button>

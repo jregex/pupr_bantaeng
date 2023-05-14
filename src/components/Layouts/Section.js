@@ -36,7 +36,7 @@ export default function Section() {
                             <Button type="button">Hubungi saya</Button>
                         </motion.div>
                         <motion.div
-                            initial={{ opacity: 0, y: -500 }}
+                            initial={{ opacity: 0, y: -300 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 2 }}
                             className="w-full self-end px-2 lg:w-1/2">
@@ -50,19 +50,8 @@ export default function Section() {
                                     blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                     priority
                                 />
-                                <div className="absolute -z-10 top-0 -left-4 lg:left-6 md:scale-120 rounded-full w-48 h-48 lg:w-72 lg:h-72 bg-primary filter blur-3xl opacity-70 mix-blend-multiply animate-blob animation-delay-2000">
-                                    {/* <svg
-                                        className="max-w-[350px] h-[300px] lg:max-w-[400px] lg:h-[400px]"
-                                        viewBox="0 0 200 200"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            fill="#0EA5E9"
-                                            d="M43.5,-66.7C57.9,-58.3,72.4,-49,74.3,-36.4C76.3,-23.8,65.6,-8,62.9,8.8C60.1,25.6,65.2,43.3,60.4,56.8C55.6,70.3,40.8,79.5,26.1,79.7C11.3,79.8,-3.4,70.8,-15.9,63C-28.3,55.2,-38.5,48.7,-44.5,39.7C-50.6,30.7,-52.4,19.3,-52.8,8.4C-53.2,-2.6,-52.1,-12.9,-49,-23.6C-46,-34.2,-41,-45.2,-32.5,-56.3C-24,-67.4,-12,-78.6,1.2,-80.5C14.5,-82.4,29,-75,43.5,-66.7Z"
-                                            transform="translate(100 100) scale(1.1)"
-                                        />
-                                    </svg> */}
-                                </div>
-                                <div className="absolute -z-10 top-0 -right-4 lg:right-6 w-48 h-48 lg:w-72 lg:h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-5000" />
+                                <div className="absolute -z-10 top-0 -left-2 lg:left-20 md:left-20 rounded-full w-40 h-40 animate-pantul-slow lg:w-48 lg:h-48 bg-primary filter blur-3xl opacity-90 mix-blend-multiply" />
+                                <div className="absolute -z-10 top-0 -right-4 lg:right-20 md:right-20 w-40 h-40 animate-pantul-slow lg:w-48 lg:h-48 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-90" />
                             </div>
                         </motion.div>
                     </div>
@@ -182,7 +171,7 @@ export default function Section() {
                     </div>
                 </div>
             </section>
-            <section id="about" className="pt-36 pb-30">
+            <section id="about" className="py-20">
                 <div className="container">
                     <div className="flex flex-wrap">
                         <div className="w-full px-4 mb-10 lg:w-1/2 relative">
@@ -204,17 +193,38 @@ export default function Section() {
                             </h4>
                             <blockquote className=" mb-3 mx-w-xl">
                                 <p className="text-slate-600 italic leading-relaxed uppercase font-semibold text-sm lg:text-md">
-                                    "Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Maiores, facere nesciunt.
-                                    Aliquam excepturi dolor maxime dignissimos?"
+                                    "TERWUJUDNYA MASYARAKAT BANTAENG YANG
+                                    SEJAHTERA LAHIR DAN BATIN BEROREANTASI PADA
+                                    KEMAJUAN , KEADILAN , KELESTARIAN , DAN
+                                    KEUNGGULAN BERBASIS AGAMA DAN BUDAYA LOKAL"
                                 </p>
                             </blockquote>
                             <h4 className="font-bold text-xl uppercase text-primary lg:text2xl mb-2">
                                 Misi
                             </h4>
                             <ul className="list-decimal text-sm font-semibold space-y-2 lg:text-md text-slate-600 px-6 mb-4">
-                                <li>menumbuhkan semangat</li>
-                                <li>belajar banyak</li>
+                                <li>
+                                    Mewujudkan sumber daya manusia yang
+                                    berkualitas.
+                                </li>
+                                <li>
+                                    Meningkatkan akselerasi program pengentasan
+                                    kemiskinan dan perluasan kesempatan kerja.
+                                </li>
+                                <li>
+                                    Meningkatkan akses, pemerataan dan kualitas
+                                    pelayanan kesehatan dan pelayanan sosial
+                                    dasar lainnya
+                                </li>
+                                <li>
+                                    Mengoptimalkan kualitas dan pemerataan
+                                    pembangunan infrastruktur yang berbasis
+                                    kelestarian lingkungan
+                                </li>
+                                <li>
+                                    Mengoptimalkan pengembangan pertanian dan
+                                    pemberdayaan ekonomi kerakyatan
+                                </li>
                             </ul>
                             {/* <div className="flex items-center mb-2">
                                 <a
@@ -265,7 +275,7 @@ export default function Section() {
                 </div>
             </section>
 
-            <section id="article" className="pt-36 pb-32 bg-slate-100">
+            <section id="article" className="pt-28 pb-32 bg-slate-100">
                 <div className="container">
                     <div className="w-full px-4">
                         <div className="max-w-xl mx-auto text-center mb-10">

@@ -26,20 +26,6 @@ module.exports = {
                 '2xl': '1280px',
             },
             keyframes: {
-                blob: {
-                    '0%': {
-                        transform: 'translate(0px,0px) scale(1)',
-                    },
-                    '30%': {
-                        transform: 'translate(40px,-60px) scale(1.1)',
-                    },
-                    '66%': {
-                        transform: 'translate(-20,20px) scale(0.9)',
-                    },
-                    '100%': {
-                        transform: 'translate(0px,0px) scale(1)',
-                    },
-                },
                 pantul: {
                     '0%, 100% ': {
                         transform: 'translateY(-10%)',
@@ -52,7 +38,6 @@ module.exports = {
                 },
             },
             animation: {
-                blob: 'blob 6s infinite',
                 'pantul-slow': 'pantul 6s infinite',
             },
         },
