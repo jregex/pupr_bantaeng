@@ -1,9 +1,10 @@
-import React from 'react'
 import Button from '../Button'
 import Image from 'next/image'
 import NewsCard from '../NewsCard'
 import GalleryModal from '../GalleryModal'
 import { motion } from 'framer-motion'
+import Input from '../Input'
+import Label from '../Label'
 
 export default function Section() {
     // const [modal, setModal] = useState(false)
@@ -370,8 +371,55 @@ export default function Section() {
                     </div>
                 </div>
             </section>
-            <section className="pt-36 pb-36">
-                <div className="container" />
+            <section className="pt-24 pb-32">
+                <div className="container">
+                    <div className="w-full px-4">
+                        <div className="max-w-xl mx-auto text-center mb-10">
+                            <h4 className="font-bold text-3xl text-primary mb-2">
+                                Kontak
+                            </h4>
+                            <h2 className="font-semibold text-dark text-lg mb-2 sm:text-2xl lg:text-xl">
+                                Hubungi kami
+                            </h2>
+                        </div>
+                    </div>
+                    <form>
+                        <div className="w-full px-4 mb-8 lg:w-1/2">
+                            <Label className="mb-2" htmlFor="nama">
+                                Nama
+                            </Label>
+                            <Input id="nama" />
+                        </div>
+                        <div className="w-full px-4 mb-8 lg:w-1/2">
+                            <Label className="mb-2" htmlFor="email">
+                                Email
+                            </Label>
+                            <Input id="email" />
+                        </div>
+                        <div className="w-full px-4 mb-8 lg:w-1/2">
+                            <Label className="mb-2" htmlFor="subjek">
+                                Subjek
+                            </Label>
+                            <Input id="subjek" />
+                        </div>
+                        <div className="w-full px-4 mb-8 lg:w-1/2">
+                            <Label className="mb-2" htmlFor="body">
+                                Komentar
+                            </Label>
+                            <textarea
+                                className="rounded-md shadow-md bg-slate-200 text-slate-600 border-none w-full h-40 focus:outline-none focul:ring-1 focus:border-primary focus:ring-primary"
+                                id="body"
+                            />
+                        </div>
+                        <div className="w-full px-4 lg:w-1/2">
+                            <Button
+                                type="submit"
+                                className="text-xs w-full flex py-3 justify-center font-semibold">
+                                Kirim
+                            </Button>
+                        </div>
+                    </form>
+                </div>
             </section>
         </>
     )
