@@ -4,8 +4,7 @@ import Section from './Section'
 const AppLayout = ({ children }) => {
     return (
         <div className="max-h-screen">
-            <Header />
-            <Section />
+            <Header />            
             <main>{children}</main>
         </div>
     )

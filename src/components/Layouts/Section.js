@@ -10,6 +10,7 @@ export default function Section() {
     // function handleChange() {
     //     setModal(!modal)
     // }
+
     return (
         <>
             <section id="home" className="pt-36 pb-4">
@@ -37,7 +38,7 @@ export default function Section() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 2 }}
                             className="w-full self-end px-4 lg:w-1/2">
-                            <div className="mt-10 relative lg:mt-9 lg:right-0 animate-pantul-slow">
+                            <div className="mt-10 relative z-9 lg:mt-9 lg:right-0 animate-pantul-slow">
                                 <Image
                                     width={400}
                                     height={400}
@@ -47,8 +48,8 @@ export default function Section() {
                                     blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                     priority
                                 />
-                                <span className="absolute -z-10 bottom-0 left-1/2 -translate-x-1/2 md:scale-120 mix-blend-lighten">
-                                    <svg
+                                <div className="absolute -z-10 top-0 -left-4 lg:left-6 md:scale-120 rounded-full w-48 h-48 lg:w-72 lg:h-72 bg-primary filter blur-3xl opacity-70 mix-blend-multiply animate-blob animation-delay-2000">
+                                    {/* <svg
                                         className="max-w-[350px] h-[300px] lg:max-w-[400px] lg:h-[400px]"
                                         viewBox="0 0 200 200"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -57,14 +58,15 @@ export default function Section() {
                                             d="M43.5,-66.7C57.9,-58.3,72.4,-49,74.3,-36.4C76.3,-23.8,65.6,-8,62.9,8.8C60.1,25.6,65.2,43.3,60.4,56.8C55.6,70.3,40.8,79.5,26.1,79.7C11.3,79.8,-3.4,70.8,-15.9,63C-28.3,55.2,-38.5,48.7,-44.5,39.7C-50.6,30.7,-52.4,19.3,-52.8,8.4C-53.2,-2.6,-52.1,-12.9,-49,-23.6C-46,-34.2,-41,-45.2,-32.5,-56.3C-24,-67.4,-12,-78.6,1.2,-80.5C14.5,-82.4,29,-75,43.5,-66.7Z"
                                             transform="translate(100 100) scale(1.1)"
                                         />
-                                    </svg>
-                                </span>
+                                    </svg> */}
+                                </div>
+                                <div className="absolute -z-10 top-0 -right-4 lg:right-6 w-48 h-48 lg:w-72 lg:h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-5000" />
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </section>
-            <section className="pt-32 pb-16 bg-slate-100" id="portofolio">
+            <section className="pt-10 pb-16 bg-slate-100" id="portofolio">
                 <div className="container">
                     <div className="w-full flex flex-wrap items-center justify-center">
                         <motion.a
@@ -73,7 +75,7 @@ export default function Section() {
                             transition={{ duration: 3.2 }}
                             href="#"
                             target="_blank"
-                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center">
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center">
                             <Image
                                 width={400}
                                 src={require('assets/img/icons/sianata2.svg')}
@@ -81,7 +83,7 @@ export default function Section() {
                                 blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                 priority
                             />
-                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1 px-2">
                                 New Sianata
                             </h3>
                         </motion.a>
@@ -91,7 +93,7 @@ export default function Section() {
                             transition={{ duration: 3 }}
                             href="#"
                             target="_blank"
-                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
                                 width={400}
                                 src={require('assets/img/icons/geolocation2.svg')}
@@ -99,7 +101,7 @@ export default function Section() {
                                 blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                 priority
                             />
-                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1 px-2">
                                 Geoportal
                             </h3>
                         </motion.a>
@@ -109,7 +111,7 @@ export default function Section() {
                             transition={{ duration: 2.8 }}
                             href="#"
                             target="_blank"
-                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
                                 width={400}
                                 src={require('assets/img/icons/building.svg')}
@@ -117,7 +119,7 @@ export default function Section() {
                                 blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                 priority
                             />
-                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1 px-2">
                                 Infrastructure
                             </h3>
                         </motion.a>
@@ -127,7 +129,7 @@ export default function Section() {
                             transition={{ duration: 2.6 }}
                             href="#"
                             target="_blank"
-                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
                                 width={400}
                                 src={require('assets/img/icons/archive2.svg')}
@@ -135,7 +137,7 @@ export default function Section() {
                                 blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                 priority
                             />
-                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1 px-2">
                                 Archive
                             </h3>
                         </motion.a>
@@ -145,7 +147,7 @@ export default function Section() {
                             transition={{ duration: 2.4 }}
                             href="#"
                             target="_blank"
-                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
                                 width={400}
                                 src={require('assets/img/icons/lpse2.svg')}
@@ -153,7 +155,7 @@ export default function Section() {
                                 blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                 priority
                             />
-                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1 px-2">
                                 LPSE
                             </h3>
                         </motion.a>
@@ -163,7 +165,7 @@ export default function Section() {
                             transition={{ duration: 2.2 }}
                             href="#"
                             target="_blank"
-                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125 hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:bg-primary flex flex-col text-center items-center hover:backdrop-blur-sm">
+                            className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
                                 width={400}
                                 src={require('assets/img/icons/sianata.svg')}
@@ -171,7 +173,7 @@ export default function Section() {
                                 blurDataURL="https://dummyimage.com/640x360/fff/aaa"
                                 priority
                             />
-                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1">
+                            <h3 className="font-bold text-sm text-slate-700 uppercase mt-2 mb-1 px-2">
                                 Sianata
                             </h3>
                         </motion.a>
@@ -181,7 +183,9 @@ export default function Section() {
             <section id="about" className="pt-36 pb-30">
                 <div className="container">
                     <div className="flex flex-wrap">
-                        <div className="w-full px-4 mb-10 lg:w-1/2">
+                        <div className="w-full px-4 mb-10 lg:w-1/2 relative">
+                            <div className="absolute -z-10 left-2 lg:left-16 top-0 md:scale-120 rounded-full w-40 h-40 lg:w-64 lg:h-64 bg-pink-400 filter blur-3xl opacity-70 mix-blend-multiply animate-blob animation-delay-2000" />
+                            <div className="absolute -z-10 bottom-0 right-4 lg:right-12 md:scale-120 rounded-full w-40 h-40 lg:w-64 lg:h-64 bg-primary filter blur-3xl opacity-70 mix-blend-multiply animate-blob animation-delay-5000" />
                             <Image
                                 width={400}
                                 height={400}
@@ -193,24 +197,24 @@ export default function Section() {
                             />
                         </div>
                         <div className="w-full px-4 lg:w-1/2">
-                            <h4 className="font-bold text-2xl uppercase md:text3xl text-primary lg:pt-10">
+                            <h4 className="font-bold text-xl uppercase lg:text2xl text-primary mb-2 lg:pt-10">
                                 Visi
                             </h4>
                             <blockquote className=" mb-3 mx-w-xl">
-                                <p className="text-slate-600 italic leading-relaxed uppercase font-semibold text-sm md:text-lg">
+                                <p className="text-slate-600 italic leading-relaxed uppercase font-semibold text-sm lg:text-md">
                                     "Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Maiores, facere nesciunt.
                                     Aliquam excepturi dolor maxime dignissimos?"
                                 </p>
                             </blockquote>
-                            <h4 className="font-bold text-2xl uppercase text-primary md:text3xl">
+                            <h4 className="font-bold text-xl uppercase text-primary lg:text2xl mb-2">
                                 Misi
                             </h4>
-                            <ul className="list-decimal text-sm font-semibold md:text-lg text-slate-600 px-6 mb-4">
+                            <ul className="list-decimal text-sm font-semibold space-y-2 lg:text-md text-slate-600 px-6 mb-4">
                                 <li>menumbuhkan semangat</li>
                                 <li>belajar banyak</li>
                             </ul>
-                            <div className="flex items-center mb-2">
+                            {/* <div className="flex items-center mb-2">
                                 <a
                                     href="#"
                                     target="_blank"
@@ -253,7 +257,7 @@ export default function Section() {
                                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                     </svg>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -337,7 +341,11 @@ export default function Section() {
                     </div>
                 </div>
             </section> */}
-            <section className="pt-36 pb-32 bg-dark" id="gallery">
+            <section
+                className="pt-36 pb-32 bg-gradient-radial from-cyan-900 via-slate-900 to-dark relative"
+                id="gallery">
+                <div className="absolute top-10 right-14 lg:right-30 rounded-full bg-primary w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]  -z-1 filter blur-3xl opacity-70 animate-pulse" />
+                <div className="absolute bottom-14 left-14 lg:left-30 rounded-full bg-pink-400 w-[180px] h-[180px] lg:w-[200px] lg:h-[200px] -z-1 filter blur-3xl opacity-60 animate-pulse" />
                 <div className="container">
                     <div className="w-full px-4">
                         <div className="max-w-xl mx-auto text-center mb-10">
@@ -350,7 +358,7 @@ export default function Section() {
                         </div>
                     </div>
                     <div className="flex flex-wrap">
-                        <div className="px-4 grid grid-cols-1 lg:grid-cols-4 gap-x-4">
+                        <div className="px-4 grid grid-cols-1 lg:grid-cols-4 gap-x-4 z-10">
                             <GalleryModal />
                             <GalleryModal />
                             <GalleryModal />
@@ -361,6 +369,9 @@ export default function Section() {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section className="pt-36 pb-36">
+                <div className="container" />
             </section>
         </>
     )

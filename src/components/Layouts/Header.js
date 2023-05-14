@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import NavMobile from '../NavMobile'
+import Navbar from '../Navbar'
 import ApplicationLogo from '../ApplicationLogo'
 import { motion } from 'framer-motion'
 
@@ -28,7 +28,7 @@ function Header() {
                         initial={{ opacity: 0, x: -500, y: 0 }}
                         animate={{ opacity: 1, x: 0, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="px-4">
+                        className="px-full">
                         <ApplicationLogo />
                     </motion.div>
                     <motion.div
@@ -36,7 +36,7 @@ function Header() {
                         animate={{ opacity: 1, x: 0, y: 0 }}
                         transition={{ duration: 1 }}
                         className="px-4 flex items-center">
-                        <NavMobile active={active} showMenu={showMenu} />
+                        <Navbar active={active} showMenu={showMenu} />
                     </motion.div>
                 </div>
             </div>

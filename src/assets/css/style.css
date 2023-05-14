@@ -1,8 +1,18 @@
 body {
-    font-family: 'Instrument Sans' sans-serif;
+    font-family: 'Inter Sans' sans-serif;
 }
 
 .navbar-fix {
     @apply fixed z-[9999] bg-white bg-opacity-70;
     backdrop-filter: blur(5px);
+}
+
+.animation-delay-2000{
+    animation-delay:2s;
+}
+.animation-delay-4000{
+    animation-delay:4s;
+}
+.animation-delay-5000{
+    animation-delay:5s;
 }
