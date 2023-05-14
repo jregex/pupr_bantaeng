@@ -352,7 +352,7 @@ export default function Section() {
                     <div className="flex flex-wrap">
                         <div className="w-full lg:w-1/2 px-4 py-2">
                             <iframe
-                                className="w-full h-72 rounded-lg"
+                                className="w-full h-72 rounded-lg bg-gradient-to-b from-primary/50 to-primary p-2"
                                 src="https://www.youtube.com/embed/0vyOYb8tJ0g"
                                 title="YouTube video player"
                                 frameBorder="0"
