@@ -5,6 +5,7 @@ import GalleryModal from '../GalleryModal'
 import { motion } from 'framer-motion'
 import Input from '../Input'
 import Label from '../Label'
+import Script from 'next/script'
 
 export default function Section() {
     // const [modal, setModal] = useState(false)
@@ -24,12 +25,12 @@ export default function Section() {
                             className="w-full self-center px-4 lg:w-1/2">
                             <h1 className="text-lg font-semibold text-primary md:text-xl">
                                 Welcome to{' '}
-                                <span className="block font-bold text-dark text-4xl mt-1 lg:text-5xl">
-                                    DPUPR Banteng
+                                <span className="block font-bold text-dark text-3xl mt-1 lg:text-4xl uppercase">
+                                    DPUPR Bantaeng
                                 </span>
                             </h1>
-                            <h2 className="font-medium text-slate-700 text-lg mb-4 lg:text-2xl">
-                                Dinas Pekerjaan Umum
+                            <h2 className="font-medium text-slate-700 text-md mb-4 lg:text-xl">
+                                Dinas PU dan Penataan Ruang
                             </h2>
 
                             <Button type="button">Hubungi saya</Button>
@@ -38,8 +39,8 @@ export default function Section() {
                             initial={{ opacity: 0, y: -500 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 2 }}
-                            className="w-full self-end px-4 lg:w-1/2">
-                            <div className="mt-10 relative z-9 lg:mt-9 lg:right-0 animate-pantul-slow">
+                            className="w-full self-end px-2 lg:w-1/2">
+                            <div className="mt-10 relative z-9 lg:mt-9 right-0 animate-pantul-slow">
                                 <Image
                                     width={400}
                                     height={400}
@@ -384,42 +385,54 @@ export default function Section() {
                             </h2>
                         </div>
                     </div>
-                    <form>
-                        <div className="w-full px-4 mb-8 lg:w-1/2">
-                            <Label className="mb-2" htmlFor="nama">
-                                Nama
-                            </Label>
-                            <Input id="nama" className="focus:shadow-xl" />
-                        </div>
-                        <div className="w-full px-4 mb-8 lg:w-1/2">
-                            <Label className="mb-2" htmlFor="email">
-                                Email
-                            </Label>
-                            <Input id="email" className="focus:shadow-xl" />
-                        </div>
-                        <div className="w-full px-4 mb-8 lg:w-1/2">
-                            <Label className="mb-2" htmlFor="subjek">
-                                Subjek
-                            </Label>
-                            <Input id="subjek" className="focus:shadow-xl" />
-                        </div>
-                        <div className="w-full px-4 mb-8 lg:w-1/2">
-                            <Label className="mb-2" htmlFor="body">
-                                Komentar
-                            </Label>
-                            <textarea
-                                className="rounded-md shadow-md bg-slate-200 text-slate-600 border-none w-full h-40 focus:outline-none focul:ring-1 focus:border-primary focus:ring-primary focus:shadow-xl"
-                                id="body"
+                    <div className="flex flex-wrap">
+                        <form className="w-full lg:w-1/2">
+                            <div className="w-full px-4 mb-8">
+                                <Label className="mb-2" htmlFor="nama">
+                                    Nama
+                                </Label>
+                                <Input id="nama" className="focus:shadow-xl" />
+                            </div>
+                            <div className="w-full px-4 mb-8">
+                                <Label className="mb-2" htmlFor="email">
+                                    Email
+                                </Label>
+                                <Input id="email" className="focus:shadow-xl" />
+                            </div>
+                            <div className="w-full px-4 mb-8">
+                                <Label className="mb-2" htmlFor="subjek">
+                                    Subjek
+                                </Label>
+                                <Input
+                                    id="subjek"
+                                    className="focus:shadow-xl"
+                                />
+                            </div>
+                            <div className="w-full px-4 mb-8">
+                                <Label className="mb-2" htmlFor="body">
+                                    Komentar
+                                </Label>
+                                <textarea
+                                    className="rounded-md shadow-md bg-slate-200 text-slate-600 border-none w-full h-40 focus:outline-none focul:ring-1 focus:border-primary focus:ring-primary focus:shadow-xl"
+                                    id="body"
+                                />
+                            </div>
+                            <div className="w-full px-4 mb-10">
+                                <Button
+                                    type="submit"
+                                    className="text-xs w-full flex py-3 justify-center font-semibold">
+                                    Kirim
+                                </Button>
+                            </div>
+                        </form>
+                        <div className="w-full lg:w-1/2 px-2 lg:px-10">
+                            <Script
+                                type="text/javascript"
+                                src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"
                             />
+                            <div id="gpr-kominfo-widget-container" />
                         </div>
-                        <div className="w-full px-4 lg:w-1/2">
-                            <Button
-                                type="submit"
-                                className="text-xs w-full flex py-3 justify-center font-semibold">
-                                Kirim
-                            </Button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </section>
         </>

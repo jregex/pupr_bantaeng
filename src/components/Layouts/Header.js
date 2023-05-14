@@ -12,7 +12,7 @@ function Header() {
     const handleScroll = () => {
         const offset = window.scrollY
         if (offset > 40) {
-            setIsi('navbar-fix')
+            setIsi('navbar-fix -px-2')
         } else {
             setIsi('absolute bg-transparent')
         }
