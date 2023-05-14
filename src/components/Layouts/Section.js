@@ -317,31 +317,7 @@ export default function Section() {
                     </div>
                 </div>
             </section>
-            {/* <section id="iframe" className="pt-36 pb-16 bg-slate-800">
-                <div className="container">
-                    <div className="flex flex-wrap">
-                        <div className="w-full lg:w-1/2">
-                            <iframe
-                                className="w-full h-64"
-                                src="https://www.youtube.com/embed/8Ea4oq8qFtM"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                            />
-                        </div>
-                        <div className="w-full lg:w-1/2 px-10">
-                            <h3 className="font-bold text-2xl text-primary">
-                                Video
-                            </h3>
-                            <h4 className="text-lg font-semibold text-gray-100">
-                                sh kjhsdkj hsdf hsdjkh skjdhk lah lajh
-                                dlfjhasjdhfa sjhdf ajshf asjdhkf
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
+
             <section
                 className="pt-36 pb-32 bg-gradient-radial from-cyan-900 via-slate-900 to-dark relative"
                 id="gallery">
@@ -371,6 +347,31 @@ export default function Section() {
                     </div>
                 </div>
             </section>
+            <section id="iframe" className="pt-28 pb-16 bg-gray-200">
+                <div className="container">
+                    <div className="flex flex-wrap">
+                        <div className="w-full lg:w-1/2 px-4 py-2">
+                            <iframe
+                                className="w-full h-72 rounded-lg"
+                                src="https://www.youtube.com/embed/0vyOYb8tJ0g"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            />
+                        </div>
+                        <div className="w-full lg:w-1/2 p-4">
+                            <h3 className="font-bold text-2xl text-primary">
+                                Video
+                            </h3>
+                            <h4 className="text-md text-slate-600">
+                                Bidang Bina Konstruksi Dinas Pekerjaan Umum dan
+                                Penataan Ruang kabupaten Bantaeng
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="pt-24 pb-32">
                 <div className="container">
                     <div className="w-full px-4">
@@ -388,26 +389,26 @@ export default function Section() {
                             <Label className="mb-2" htmlFor="nama">
                                 Nama
                             </Label>
-                            <Input id="nama" />
+                            <Input id="nama" className="focus:shadow-xl" />
                         </div>
                         <div className="w-full px-4 mb-8 lg:w-1/2">
                             <Label className="mb-2" htmlFor="email">
                                 Email
                             </Label>
-                            <Input id="email" />
+                            <Input id="email" className="focus:shadow-xl" />
                         </div>
                         <div className="w-full px-4 mb-8 lg:w-1/2">
                             <Label className="mb-2" htmlFor="subjek">
                                 Subjek
                             </Label>
-                            <Input id="subjek" />
+                            <Input id="subjek" className="focus:shadow-xl" />
                         </div>
                         <div className="w-full px-4 mb-8 lg:w-1/2">
                             <Label className="mb-2" htmlFor="body">
                                 Komentar
                             </Label>
                             <textarea
-                                className="rounded-md shadow-md bg-slate-200 text-slate-600 border-none w-full h-40 focus:outline-none focul:ring-1 focus:border-primary focus:ring-primary"
+                                className="rounded-md shadow-md bg-slate-200 text-slate-600 border-none w-full h-40 focus:outline-none focul:ring-1 focus:border-primary focus:ring-primary focus:shadow-xl"
                                 id="body"
                             />
                         </div>

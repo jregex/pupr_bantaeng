@@ -15,7 +15,6 @@ export default function Footer() {
                         &copy; copyright {new Date().getFullYear()} develop with{' '}
                         <FontAwesomeIcon
                             icon={faFire}
-                            size="24"
                             className="text-primary"
                         />{' '}
                         by
@@ -28,7 +27,7 @@ export default function Footer() {
                         </a>
                     </h5>
                 </div>
-                <div className="w-full px-4 flex flex-wrap">
+                {/* <div className="w-full px-4 flex flex-wrap">
                     <div className="w-full lg:w-1/2 text-center lg:text-left">
                         <a className="text-sm text-white hover:text-primary cursor-pointer">
                             Contact
@@ -38,7 +37,7 @@ export default function Footer() {
                             About
                         </a>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
