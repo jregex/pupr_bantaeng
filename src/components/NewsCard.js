@@ -5,11 +5,12 @@ export default function NewsCard({ alamat, gambar, judul, desc, alt }) {
     return (
         <div className="overflow-hidden bg-white shadow-lg rounded-2xl shadow-lg mb-10">
             <Link href={alamat} legacyBehavior>
-                <a className="hover:opacity-70">
+                <a className="hover:opacity-70 hover:scale-125 transition ease-in-out duration:400">
                     <Image
                         src={gambar ? gambar : require('assets/img/contoh.png')}
                         alt={alt}
                         className="w-full"
+                        blurDataURL="https://dummyimage.com/600x400/ababab/000000&text=blur"
                     />
                 </a>
             </Link>

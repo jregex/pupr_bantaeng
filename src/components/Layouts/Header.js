@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Navbar from '../Navbar'
 import ApplicationLogo from '../ApplicationLogo'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 function Header() {
     const [isi, setIsi] = useState('')
@@ -14,7 +15,7 @@ function Header() {
         if (offset > 40) {
             setIsi('navbar-fix -px-2')
         } else {
-            setIsi('absolute bg-transparent')
+            setIsi('absolute bg-white/60')
         }
     }
     useEffect(() => {
@@ -29,7 +30,9 @@ function Header() {
                         animate={{ opacity: 1, x: 0, y: 0 }}
                         transition={{ duration: 1 }}
                         className="px-full">
-                        <ApplicationLogo />
+                        <Link href="/">
+                            <ApplicationLogo />
+                        </Link>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, x: 500, y: 0 }}

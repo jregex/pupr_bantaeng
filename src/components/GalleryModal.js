@@ -17,6 +17,7 @@ export default function GalleryModal({ gambar }) {
                 <Image
                     src={gambar ?? require('assets/img/contoh.png')}
                     className="w-full"
+                    blurDataURL="https://dummyimage.com/300x300/ababab/000000&text=blur"
                 />
             </a>
             <input
@@ -41,6 +42,7 @@ export default function GalleryModal({ gambar }) {
                     <Image
                         src={gambar ?? require('assets/img/contoh.png')}
                         className="w-full"
+                        blurDataURL="https://dummyimage.com/600x400/ababab/000000&text=blur"
                     />
                 </div>
             </div>

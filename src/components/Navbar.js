@@ -4,7 +4,13 @@ import Link from 'next/link'
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { hoverDropdown } from './hoverDropdown'
+import { useRouter } from 'next/router'
 function Navbar({ showMenu, active }) {
+    const router = useRouter()
+    const path = router.pathname
+    const subpath = path.split('/')[1]
+    const aktif = 'text-primary font-bold lg:scale-125'
+    const nonaktif = 'text-gray-600 font-semibold'
     const listItem = [
         { text: 'Informasi', target: '#informasi' },
         { text: 'Peraturan', target: '#peraturan' },
@@ -50,8 +56,10 @@ function Navbar({ showMenu, active }) {
                 <ul className="block lg:flex">
                     <li className="group py-2 px-full hover:cursor-pointer">
                         <Link
-                            className="text-sm font-semibold text-gray-600 mx-8 flex py-2 px-2 lg:px-0 lg:py-0 group-hover:text-primary group-hover:bg-slate-100 lg:group-hover:bg-transparent lg:group-hover:scale-125 lg:group-hover:transition lg:group-hover:ease-in-out lg:group-hover:duration-500"
-                            href="#home">
+                            className={`text-sm mx-8 flex py-2 px-2 lg:px-0 lg:py-0 group-hover:text-primary group-hover:bg-slate-100 lg:group-hover:bg-transparent lg:group-hover:scale-125 lg:group-hover:transition lg:group-hover:ease-in-out lg:group-hover:duration-500 ${
+                                path === '/' ? aktif : nonaktif
+                            }`}
+                            href="/">
                             Beranda
                         </Link>
                     </li>
@@ -59,9 +67,12 @@ function Navbar({ showMenu, active }) {
                         className="group py-2 px-full hover:cursor-pointer"
                         ref={dropdownRef}>
                         <a
-                            className="text-sm font-semibold text-gray-600 mx-8 flex py-2 px-2 lg:px-0 lg:py-0 group-hover:text-primary group-hover:bg-slate-100 lg:group-hover:bg-transparent lg:group-hover:scale-125 lg:group-hover:transition lg:group-hover:ease-in-out lg:group-hover:duration-500"
+                            className={`text-sm mx-8 flex py-2 px-2 lg:px-0 lg:py-0 group-hover:text-primary group-hover:bg-slate-100 lg:group-hover:bg-transparent lg:group-hover:scale-125 lg:group-hover:transition lg:group-hover:ease-in-out lg:group-hover:duration-500 ${
+                                subpath === 'profil' ? aktif : nonaktif
+                            }`}
                             href="#"
-                            onMouseOver={() => setOpen(true)}>
+                            onMouseOver={() => setOpen(true)}
+                            onClick={() => setOpen(true)}>
                             Profil
                         </a>
                         <motion.div
@@ -73,12 +84,16 @@ function Navbar({ showMenu, active }) {
                             } z-10 bg-white divide-y divide-gray-100 rounded-lg lg:shadow-lg relative w-full lg:w-60 lg:absolute`}>
                             <ul className="py-4 text-sm font-semibold px-2 text-gray-600 ml-6 lg:ml-0">
                                 <li className="hover:bg-gray-100 hover:text-primary hover:cursor-pointer">
-                                    <Link href="#" className="block px-4 py-3">
+                                    <Link
+                                        href="/profil/sejarah"
+                                        className="block px-4 py-3">
                                         Sejarah lembaga
                                     </Link>
                                 </li>
                                 <li className="hover:bg-gray-100 hover:text-primary hover:cursor-pointer">
-                                    <Link href="#" className="block px-4 py-3">
+                                    <Link
+                                        href="/profil/visimisi"
+                                        className="block px-4 py-3">
                                         Visi misi
                                     </Link>
                                 </li>
@@ -88,7 +103,9 @@ function Navbar({ showMenu, active }) {
                                     </Link>
                                 </li>
                                 <li className="hover:bg-gray-100 hover:text-primary hover:cursor-pointer">
-                                    <Link href="#" className="block px-4 py-3">
+                                    <Link
+                                        href="/profil/struktur"
+                                        className="block px-4 py-3">
                                         Struktur organisasi
                                     </Link>
                                 </li>
@@ -98,7 +115,7 @@ function Navbar({ showMenu, active }) {
                                     </Link>
                                 </li>
                                 <li className="hover:bg-gray-100 hover:text-primary hover:cursor-pointer">
-                                    <Link href="#" className="block px-4 py-3">
+                                    <Link href="/" className="block px-4 py-3">
                                         Peta dan denah
                                     </Link>
                                 </li>
@@ -109,9 +126,12 @@ function Navbar({ showMenu, active }) {
                         className="group py-2 px-full hover:cursor-pointer"
                         ref={dropdownRef2}>
                         <a
-                            className="text-sm font-semibold text-gray-600 mx-8 flex py-2 px-2 lg:px-0 lg:py-0 group-hover:text-primary group-hover:bg-slate-100 lg:group-hover:bg-transparent lg:group-hover:scale-125 lg:group-hover:transition lg:group-hover:ease-in-out lg:group-hover:duration-500"
+                            className={`text-sm mx-8 flex py-2 px-2 lg:px-0 lg:py-0 group-hover:text-primary group-hover:bg-slate-100 lg:group-hover:bg-transparent lg:group-hover:scale-125 lg:group-hover:transition lg:group-hover:ease-in-out lg:group-hover:duration-500 ${
+                                subpath === 'infopublik' ? aktif : nonaktif
+                            }`}
                             href="#"
-                            onMouseOver={() => setOpen2(true)}>
+                            onMouseOver={() => setOpen2(true)}
+                            onClick={() => setOpen2(true)}>
                             Informasi publik
                         </a>
                         <motion.div
@@ -123,7 +143,9 @@ function Navbar({ showMenu, active }) {
                             } z-10 bg-white divide-y divide-gray-100 rounded-lg lg:shadow-lg relative w-full lg:w-60 lg:absolute`}>
                             <ul className="py-4 text-sm font-semibold px-2 text-gray-600 ml-6 lg:ml-0">
                                 <li className="hover:bg-gray-100 hover:text-primary hover:cursor-pointer">
-                                    <Link href="#" className="block px-4 py-3">
+                                    <Link
+                                        href="/infopublik/infografisjalan"
+                                        className="block px-4 py-3">
                                         Infografis jalan
                                     </Link>
                                 </li>
