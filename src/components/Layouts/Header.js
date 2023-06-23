@@ -22,7 +22,8 @@ function Header() {
         window.addEventListener('scroll', handleScroll)
     }, [])
     return (
-        <header className={`${isi} top-0 left-0 w-full flex items-center z-10`}>
+        <header
+            className={`${isi} top-0 left-0 lg:w-screen w-full flex items-center z-10`}>
             <div className="container">
                 <div className="flex items-center justify-between relative">
                     <motion.div

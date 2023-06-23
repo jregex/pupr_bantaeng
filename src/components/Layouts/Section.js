@@ -6,12 +6,15 @@ import { motion } from 'framer-motion'
 import Input from '../Input'
 import Label from '../Label'
 import Script from 'next/script'
+import axios from 'axios'
 
-export default function Section() {
+export default function Section({ posts }) {
     // const [modal, setModal] = useState(false)
     // function handleChange() {
     //     setModal(!modal)
     // }
+
+    console.log(posts)
 
     return (
         <>
@@ -289,41 +292,18 @@ export default function Section() {
                     </div>
                     <div className="flex flex-wrap">
                         <div className="px-4 grid grid-cols-1 lg:grid-cols-4 gap-x-4">
-                            <NewsCard
-                                gambar={require('assets/img/contoh.png')}
-                                judul="Belajar Programming"
-                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
-                                alamat="#"
-                                alt="Article1"
-                            />
-                            <NewsCard
-                                gambar={require('assets/img/contoh.png')}
-                                judul="Belajar Ngoding"
-                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
-                                alamat="#"
-                                alt="article 2"
-                            />
-                            <NewsCard
-                                gambar={require('assets/img/contoh.png')}
-                                judul="Belajar Next js"
-                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
-                                alamat="#"
-                                alt="article 3"
-                            />
-                            <NewsCard
-                                gambar={require('assets/img/contoh.png')}
-                                judul="Belajar Next js"
-                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
-                                alamat="#"
-                                alt="article 4"
-                            />
-                            <NewsCard
-                                gambar={require('assets/img/contoh.png')}
-                                judul="Belajar Next js"
-                                desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
-                                alamat="#"
-                                alt="article 4"
-                            />
+                            {posts.map((item, i) => {
+                                return (
+                                    <NewsCard
+                                        key={i}
+                                        gambar={require('assets/img/contoh.png')}
+                                        judul={item.title}
+                                        desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
+                                        alamat="#"
+                                        alt="Article1"
+                                    />
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
@@ -447,4 +427,13 @@ export default function Section() {
             </section>
         </>
     )
+}
+
+export const getServerSideProps = async () => {
+    const res = await fetch('https://ticketorder.site/api/posts')
+    const posts = await res.json()
+
+    console.log(posts.data)
+
+    return { props: { posts } }
 }

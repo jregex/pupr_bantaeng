@@ -50,7 +50,7 @@ function Navbar({ showMenu, active }) {
                 )}
             </button>
             <nav
-                className={` shadow-2xl bg-white shadow rounded-xl right-0 w-full top-full lg:block lg:static lg:max-w-full lg:bg-transparent lg:shadow-none ${
+                className={` shadow-2xl bg-white shadow rounded-xl right-0 w-full z-30 top-full lg:block lg:static lg:max-w-full lg:bg-transparent lg:shadow-none ${
                     active ? 'hidden' : 'absolute'
                 }`}>
                 <ul className="block lg:flex">
