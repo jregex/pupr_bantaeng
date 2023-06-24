@@ -10,11 +10,13 @@ import Label from '@/components/Label'
 import Script from 'next/script'
 import axios from 'axios'
 import YouTube from 'react-youtube'
+import { parseISO, format } from 'date-fns'
 
 export default function Home({ posts }) {
     const _onReady = e => {
         e.target.pauseVideo()
     }
+    console.log(posts)
     return (
         <AppLayout>
             <section id="home" className="pt-36 pb-4">
@@ -301,14 +303,17 @@ export default function Home({ posts }) {
                     <div className="flex flex-wrap">
                         <div className="px-4 grid grid-cols-1 lg:grid-cols-4 gap-x-4">
                             {posts.map(item => {
+                                const date = parseISO(item.created_at)
                                 return (
                                     <NewsCard
                                         key={item.id}
                                         gambar={`http://localhost:8000/storage/posts/${item.image}`}
                                         judul={item.title}
                                         desc={item.body}
+                                        category={item.category.category}
                                         alamat="#"
-                                        alt="Article1"
+                                        waktu={format(date, 'dd/MM/yyyy')}
+                                        alt={item.slug}
                                     />
                                 )
                             })}
@@ -444,7 +449,7 @@ export default function Home({ posts }) {
 
 export const getServerSideProps = async () => {
     const posts = await axios
-        .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/posts`)
+        .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/posts`)
         .then(res => {
             return res.data.data
         })

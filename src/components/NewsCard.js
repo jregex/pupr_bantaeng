@@ -1,7 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faListAlt, faClock } from '@fortawesome/free-solid-svg-icons'
 
-export default function NewsCard({ alamat, gambar, judul, desc, alt }) {
+export default function NewsCard({
+    alamat,
+    gambar,
+    judul,
+    desc,
+    waktu,
+    category,
+    alt,
+}) {
     const text2 = desc.replace(/<[^>]+>/g, '')
     return (
         <article className="overflow-hidden bg-white shadow-lg rounded-2xl shadow-lg mb-10 card">
@@ -33,6 +43,30 @@ export default function NewsCard({ alamat, gambar, judul, desc, alt }) {
                         </a>
                     </Link>
                 </h2>
+                <div className="flex items-center justify-around items-center text-sm">
+                    <p className="text-slate-400 leading-none hover:text-primary">
+                        <FontAwesomeIcon
+                            icon={faListAlt}
+                            className="hover:text-primary mr-2"
+                        />{' '}
+                        {category}
+                    </p>
+                    {/* <p className="text-slate-400 items-center">
+                        <FontAwesomeIcon
+                            icon={faUserCircle}
+                            className="hover:text-primary"
+                        />{' '}
+                        {penulis}
+                    </p> */}
+                    <p className="text-slate-400">
+                        <FontAwesomeIcon
+                            icon={faClock}
+                            className="hover:text-primary"
+                        />{' '}
+                        {waktu}
+                    </p>
+                </div>
+                <hr className="mb-2" />
                 <p className="truncate break-all text-base text-slate-600 font-medium mb-6">
                     {text2}
                 </p>

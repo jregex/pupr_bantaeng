@@ -1,0 +1,23 @@
+{
+    "tupoksi": [
+        {
+            "id": 1,
+            "jabatan": "Kepala Dinas",
+            "tugas": "merumuskan konsep, sasaran, mengkoordinasikan, menyelenggarakan,membina,mengarahkan,mengevaluasi serta melaporkan pelaksanaan urusan
+            pemerintahan daerah dibudang
+            pekerjaan umum dan penataan
+            ruang berdasarkan azas otonomi
+            dan tugas pembantuan sesuai
+            dengan urusan pemerintahan
+            yang menjadi kewenangannya
+            berdasarkan ketentuan yang
+            berlaku.",
+            "fungsi":"percobaan"
+        },
+        {
+            "id": 2,
+            "nama": "Arman",
+            "desc": "Pengangguran"
+        }
+    ]
+}
