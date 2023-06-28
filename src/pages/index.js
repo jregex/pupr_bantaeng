@@ -16,7 +16,6 @@ export default function Home({ posts }) {
     const _onReady = e => {
         e.target.pauseVideo()
     }
-    console.log(posts)
     return (
         <AppLayout>
             <section id="home" className="pt-36 pb-4">
@@ -449,7 +448,7 @@ export default function Home({ posts }) {
 
 export const getServerSideProps = async () => {
     const posts = await axios
-        .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/posts`)
+        .get(`https://ticketorder.site/api/posts`)
         .then(res => {
             return res.data.data
         })

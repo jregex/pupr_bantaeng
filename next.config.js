@@ -2,7 +2,7 @@
 const nextConfig = {
     runtime: 'nodejs',
     images: {
-        domains: ['localhost'],
+        domains: ['ticketorder.site'],
     },
     reactStrictMode: true,
 }
