@@ -16,7 +16,7 @@ export default function Tupoksi() {
     return (
         <AppLayout>
             <Head>
-                <title>Tupoksi</title>
+                <title>Tupoksi | DPUPR Bantaeng</title>
             </Head>
             <Banner nama="Tugas pokok & fungsi" />
             <div className="w-full pt-10 pb-28">

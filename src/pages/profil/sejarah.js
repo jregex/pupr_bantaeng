@@ -1,9 +1,13 @@
 import AppLayout from '@/components/Layouts/AppLayout'
 import Banner from '@/components/Layouts/Banner'
+import Head from 'next/head'
 
 export default function Sejarah() {
     return (
         <AppLayout>
+            <Head>
+                <title>Sejarah | DPUPR Bantaeng</title>
+            </Head>
             <Banner nama="Sejarah" />
             <div className="w-full pt-10 pb-28">
                 <div className="container text-sm font-base text-justify text-gray-600 space-y-5 leading-relaxed antialiased px-6">

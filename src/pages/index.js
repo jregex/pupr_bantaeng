@@ -11,6 +11,7 @@ import Script from 'next/script'
 import axios from 'axios'
 import YouTube from 'react-youtube'
 import { parseISO, format } from 'date-fns'
+import Head from 'next/head'
 
 export default function Home({ posts }) {
     const _onReady = e => {
@@ -18,6 +19,9 @@ export default function Home({ posts }) {
     }
     return (
         <AppLayout>
+            <Head>
+                <title>Beranda | DPUPR Bantaeng</title>
+            </Head>
             <section id="home" className="pt-36 pb-4">
                 <div className="container">
                     <div className="flex flex-wrap">

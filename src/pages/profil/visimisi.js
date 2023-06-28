@@ -1,10 +1,14 @@
 import AppLayout from '@/components/Layouts/AppLayout'
 import Banner from '@/components/Layouts/Banner'
+import Head from 'next/head'
 import Image from 'next/image'
 
 export default function VisiMisi() {
     return (
         <AppLayout>
+            <Head>
+                <title>Visi misi | DPUPR Bantaeng</title>
+            </Head>
             <Banner nama="Visi Misi" />
             <section id="about" className="pt-20">
                 <div className="container">
