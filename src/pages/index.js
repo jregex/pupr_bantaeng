@@ -306,7 +306,7 @@ export default function Home({ posts }) {
                                 return (
                                     <NewsCard
                                         key={item.id}
-                                        gambar={`http://localhost:8000/storage/posts/${item.image}`}
+                                        gambar={`https://ticketorder.site/storage/public/posts/${item.image}`}
                                         judul={item.title}
                                         desc={item.body}
                                         category={item.category.category}
