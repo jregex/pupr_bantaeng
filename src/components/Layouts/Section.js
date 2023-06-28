@@ -1,20 +1,17 @@
 import Button from '../Button'
 import Image from 'next/image'
-import NewsCard from '../NewsCard'
+// import NewsCard from '../NewsCard'
 import GalleryModal from '../GalleryModal'
 import { motion } from 'framer-motion'
 import Input from '../Input'
 import Label from '../Label'
 import Script from 'next/script'
-import axios from 'axios'
 
-export default function Section({ posts }) {
+export default function Section() {
     // const [modal, setModal] = useState(false)
     // function handleChange() {
     //     setModal(!modal)
     // }
-
-    console.log(posts)
 
     return (
         <>
@@ -292,18 +289,7 @@ export default function Section({ posts }) {
                     </div>
                     <div className="flex flex-wrap">
                         <div className="px-4 grid grid-cols-1 lg:grid-cols-4 gap-x-4">
-                            {posts.map((item, i) => {
-                                return (
-                                    <NewsCard
-                                        key={i}
-                                        gambar={require('assets/img/contoh.png')}
-                                        judul={item.title}
-                                        desc="sdhfj hskdj hsdjhf kjshdfh sdfh ksjdhfsdhfklshdfjkhsdjfkhsdjfhsjdhfsdfjhskjdfh  dshf"
-                                        alamat="#"
-                                        alt="Article1"
-                                    />
-                                )
-                            })}
+                            {/*  */}
                         </div>
                     </div>
                 </div>
@@ -427,13 +413,4 @@ export default function Section({ posts }) {
             </section>
         </>
     )
-}
-
-export const getServerSideProps = async () => {
-    const res = await fetch('https://ticketorder.site/api/posts')
-    const posts = await res.json()
-
-    console.log(posts.data)
-
-    return { props: { posts } }
 }
