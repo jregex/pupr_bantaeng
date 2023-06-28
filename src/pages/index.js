@@ -72,7 +72,7 @@ export default function Home({ posts }) {
                             initial={{ opacity: 0, y: 500 }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 3.2 }}
-                            href="#"
+                            href="https://dpupr.bantaengkab.go.id/newsianata/"
                             target="_blank"
                             className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center">
                             <Image
@@ -90,7 +90,7 @@ export default function Home({ posts }) {
                             initial={{ opacity: 0, y: 500 }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 3 }}
-                            href="#"
+                            href="https://dpupr.bantaengkab.go.id/geoportal2/"
                             target="_blank"
                             className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
@@ -108,7 +108,7 @@ export default function Home({ posts }) {
                             initial={{ opacity: 0, y: 500 }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 2.8 }}
-                            href="#"
+                            href="https://dpupr.bantaengkab.go.id/infrastruktur/"
                             target="_blank"
                             className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
@@ -126,7 +126,7 @@ export default function Home({ posts }) {
                             initial={{ opacity: 0, y: 500 }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 2.6 }}
-                            href="#"
+                            href="https://dpupr.bantaengkab.go.id/Arsip/"
                             target="_blank"
                             className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
@@ -144,7 +144,7 @@ export default function Home({ posts }) {
                             initial={{ opacity: 0, y: 500 }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 2.4 }}
-                            href="#"
+                            href="http://lpse.bantaengkab.go.id/eproc4/lelang"
                             target="_blank"
                             className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
@@ -162,7 +162,7 @@ export default function Home({ posts }) {
                             initial={{ opacity: 0, y: 500 }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 2.2 }}
-                            href="#"
+                            href="https://dpupr.bantaengkab.go.id/sianata/"
                             target="_blank"
                             className="max-w-[120px] mx-4 p-2 lg:mx-6 xl:mx-8 hover:scale-125  hover:transition hover:ease-in-out hover:rounded-lg hover:duration-500 hover:backdrop-blur-md hover:shadow-3xl flex flex-col text-center items-center hover:backdrop-blur-sm">
                             <Image
