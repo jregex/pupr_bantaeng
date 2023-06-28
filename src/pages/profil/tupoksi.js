@@ -32,7 +32,9 @@ export default function Tupoksi() {
                         .filter(item => {
                             return search.toLowerCase() === ''
                                 ? item
-                                : item.jabatan.toLowerCase().includes(search)
+                                : item.jabatan
+                                      .toLowerCase()
+                                      .includes(search.toLowerCase())
                         })
                         .map(item => (
                             <div
