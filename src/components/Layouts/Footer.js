@@ -10,6 +10,7 @@ export default function Footer() {
                     <Image
                         src={require('assets/img/footer-logo.png')}
                         className="w-[100px] mb-2"
+                        alt="Footer logo"
                     />
                     <h5 className="text-gray-100 text-sm lg:text-md">
                         &copy; copyright {new Date().getFullYear()} develop with{' '}

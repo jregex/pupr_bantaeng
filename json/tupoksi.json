@@ -3,21 +3,28 @@
         {
             "id": 1,
             "jabatan": "Kepala Dinas",
-            "tugas": "merumuskan konsep, sasaran, mengkoordinasikan, menyelenggarakan,membina,mengarahkan,mengevaluasi serta melaporkan pelaksanaan urusan
-            pemerintahan daerah dibudang
-            pekerjaan umum dan penataan
-            ruang berdasarkan azas otonomi
-            dan tugas pembantuan sesuai
-            dengan urusan pemerintahan
-            yang menjadi kewenangannya
-            berdasarkan ketentuan yang
-            berlaku.",
-            "fungsi":"percobaan"
+            "tugas": "merumuskan konsep, sasaran, mengkoordinasikan, menyelenggarakan,membina,mengarahkan,mengevaluasi serta melaporkan pelaksanaan urusan pemerintahan daerah dibudang pekerjaan umum dan penataan ruang berdasarkan azas otonomi dan tugas pembantuan sesuai dengan urusan pemerintahan yang menjadi kewenangannya berdasarkan ketentuan yang berlaku.",
+            "fungsi": [
+                "perumusan Kebijaksanaan Teknis Dinas;",
+                "penyusunan Rencana Teknis Dinas;",
+                "penyelenggaraan Pelayanan Urusan Pemerintahan dan Pelayanan Umum di bidang Pekerjaan Umum dan Penataan Ruang;",
+                "pembinaan, Pengkoordinasian, pengendalian, pengawasan program dan Kegiatan Dinas;",
+                "penyelenggaraan evaluasi program dan kegiatan dinas;",
+                "pelaksanaan tugas lain yang diberikan oleh pimpinan sesuai dengan visi misi daerah; dan",
+                "pengkoordinasiaan perumusan dan penyusunan program kerja dinas sesuai bidang tugasnya"
+            ]
         },
         {
             "id": 2,
-            "nama": "Arman",
-            "desc": "Pengangguran"
+            "jabatan": "Sekretariat",
+            "tugas": "mengkoordinasikan penyiapan bahan penyusunan kebijakan teknis dan pelaksanaan tugas kesekretariatan meliputi umum dan kepegawaian, program dan pelaporan, keuangan, serta pemberian pelayanan administrasi dan fungsional kepada semua unsure dalam lingkup Dinas;",
+            "fungsi": [
+                "Penyusunan kebijakan teknis bidang administrasi umum dan kepegawaian, program dan pelaporan serta keuangan;",
+                "Pembinaan pelaksanaan tugas bidang umum dan kepegawaian, program dan pelaporan serta keuangan; pemberian dukungan atas penyelenggaraan urusan dibidang umum, kepegawaian, perlengkapan dan asset, perencanaan dan pelaporan, serta keuangan;",
+                "Pemberian dukungan atas penyelenggaraan pelayanan administrasi dan fungsional kepada seluruh satuan organisasi dalam lingkup dinas;",
+                "Pengkoordinasian, pengawasan, pengendalian dan evaluasi program dan kegiatan lingkup dinas;",
+                "Pelaksanaan tugas lain yang diberikan oleh Kepala Dinas sesuai dengan tugas dan fungsinya."
+            ]
         }
     ]
 }

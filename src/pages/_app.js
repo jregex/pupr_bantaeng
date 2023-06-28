@@ -1,4 +1,5 @@
-import 'tailwindcss/tailwind.css'
+// import 'tailwindcss/tailwind.css'
+import '../assets/css/globals.css'
 import '../assets/css/style.css'
 // import Font Awesome CSS
 import '@fortawesome/fontawesome-svg-core/styles.css'

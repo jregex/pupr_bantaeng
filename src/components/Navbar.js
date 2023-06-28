@@ -98,11 +98,11 @@ function Navbar({ showMenu, active }) {
                                     </Link>
                                 </li>
                                 <li className="hover:bg-gray-100 hover:text-primary hover:cursor-pointer">
-                                    <Link
+                                    <a
                                         href="/profil/tupoksi"
                                         className="block px-4 py-3">
                                         Tugas pokok dan fungsi
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li className="hover:bg-gray-100 hover:text-primary hover:cursor-pointer">
                                     <Link
