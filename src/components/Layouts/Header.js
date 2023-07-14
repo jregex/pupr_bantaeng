@@ -3,6 +3,7 @@ import Navbar from '../Navbar'
 import ApplicationLogo from '../ApplicationLogo'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Head from 'next/head'
 
 function Header() {
     const [isi, setIsi] = useState('')
